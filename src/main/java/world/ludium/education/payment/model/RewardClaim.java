@@ -1,4 +1,4 @@
-package world.ludium.education.payment;
+package world.ludium.education.payment.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
