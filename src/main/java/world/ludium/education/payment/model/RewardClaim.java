@@ -12,7 +12,7 @@ import java.util.UUID;
 public class RewardClaim {
     @Id
     private UUID id;
-    private UUID missionId;
+    private UUID resourceId;
     private UUID coinNetworkId;
     private String rewardClaimStatus;
     private Integer amount;
@@ -29,12 +29,12 @@ public class RewardClaim {
         this.id = id;
     }
 
-    public UUID getMissionId() {
-        return missionId;
+    public UUID getResourceId() {
+        return resourceId;
     }
 
-    public void setMissionId(UUID missionId) {
-        this.missionId = missionId;
+    public void setResourceId(UUID resourceId) {
+        this.resourceId = resourceId;
     }
 
     public UUID getCoinNetworkId() {

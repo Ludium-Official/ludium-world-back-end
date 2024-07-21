@@ -19,7 +19,7 @@ public class MissionRewardClaimService {
 
     public Mono<RewardClaim> getMissionRewardClaimMono(UUID missionId, UUID userId) {
         return Mono.defer(() -> {
-            Optional<RewardClaim> rewardClaim = missionRewardClaimRepository.findByMissionIdAndUserId(missionId, userId);
+            Optional<RewardClaim> rewardClaim = missionRewardClaimRepository.findByResourceIdAndUserId(missionId, userId);
             return rewardClaim.map(Mono::just).orElseGet(Mono::empty);
         });
     }

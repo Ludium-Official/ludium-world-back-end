@@ -7,5 +7,5 @@ import java.util.Optional;
 import java.util.UUID;
 
 public interface MissionRewardClaimRepository extends JpaRepository<RewardClaim, UUID> {
-    public Optional<RewardClaim> findByMissionIdAndUserId(UUID missionId, UUID userId);
+    public Optional<RewardClaim> findByResourceIdAndUserId(UUID missionId, UUID userId);
 }
