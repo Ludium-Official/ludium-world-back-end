@@ -13,6 +13,7 @@ public class RewardClaim {
     @Id
     private UUID id;
     private UUID resourceId;
+    private String resourceType;
     private UUID coinNetworkId;
     private String rewardClaimStatus;
     private Integer amount;
@@ -91,5 +92,13 @@ public class RewardClaim {
 
     public void setUpdatedDate(Timestamp updatedDate) {
         this.updatedDate = updatedDate;
+    }
+
+    public String getResourceType() {
+        return resourceType;
+    }
+
+    public void setResourceType(String resourceType) {
+        this.resourceType = resourceType;
     }
 }
