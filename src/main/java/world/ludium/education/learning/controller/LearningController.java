@@ -424,7 +424,7 @@ public class LearningController {
       return responseUtil.getUnAuthorizedMessage();
     }
 
-    if (!ludiumUser.getId().equals(mission.getUsrId())) {
+    if (!ludiumUserService.isAdmin(ludiumUser.getId()) && !ludiumUser.getId().equals(mission.getUsrId())) {
       return responseUtil.getForbiddenExceptionMessage(
           new ResponseException("미션 수정자 정보가 일치하지 않습니다.", ""));
     }
@@ -445,7 +445,7 @@ public class LearningController {
       return responseUtil.getUnAuthorizedMessage();
     }
 
-    if (!ludiumUser.getId().equals(article.getUsrId())) {
+    if (!ludiumUserService.isAdmin(ludiumUser.getId()) && !ludiumUser.getId().equals(article.getUsrId())) {
       return responseUtil.getForbiddenExceptionMessage(
           new ResponseException("아티클 수정자 정보가 일치하지 않습니다.", ""));
     }
